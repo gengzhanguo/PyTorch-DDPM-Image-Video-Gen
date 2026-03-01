@@ -1,3 +1,20 @@
 *.pth
 identifier*
 *.id
+
+# Windows Mark-of-the-Web (copied into files on WSL/Linux)
+*:Zone.Identifier
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# ML artifacts (recommended)
+wandb/
+runs/
+logs/
+outputs/
+*.pth
+*.pt
+*.ckpt
