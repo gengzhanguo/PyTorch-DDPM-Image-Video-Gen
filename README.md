@@ -40,7 +40,7 @@ DDPM_IMG/
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url>
+    git clone https://github.com/gengzhanguo/PyTorch-DDPM-Image-Video-Gen.git
     cd DDPM_IMG
     ```
 
