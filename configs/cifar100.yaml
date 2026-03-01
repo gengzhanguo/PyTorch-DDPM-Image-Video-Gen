@@ -1,0 +1,59 @@
+dataset: CIFAR100
+
+# === General parameters ===
+save_dir: "./CIFAR100_Results"
+seed: 42
+device: "cuda"
+
+# === Dataset parameters ===
+dataset_path: "C:/Users/Admin/Desktop/Research/dataset/CIFAR100"
+digits: [0, 1, 2, 3]
+RGB_channel: 3
+depth_channel: 0
+depth_loc: [0., 1.]
+pt_per_digit: 500
+img_dim: 32
+RGB_range: [-1.0, 1.0]
+# dataset_shape:
+latent_dim: 1
+split_ratio: 0.8
+batch_size: 32
+
+# === Model parameters ===
+dim_conv: 2
+# --- Embedding parameters ---
+Embedding_method: "Sinusoidal"
+# --- Attention parameters ---
+num_head: 4
+dim_head: 32
+# num_mem_kv: 4
+# # --- Transformer parameters ---
+# patch_size: 4
+# embed_dim: 128
+# num_att: 6
+# --- DDPM parameters---
+unet_choice: "bottleneck"
+self_cond: false
+immiscible: false
+min_SNR_lossweight: false
+offset_noise_strength: 0.0
+learn_var: false
+image_channel: 3 # just a fake value, will be replaced by init value
+base_channel: 128
+base_mults: [1, 2, 4, 8]
+c_emb_dim: 128
+t_emb_dim: 256
+
+num_ts: 500
+target_mode: "noise"
+
+# === Training parameters ===
+lr: 0.0001
+val_num: 25
+num_epochs: 10000
+max_patience: 999999
+
+# === Postprocess parameters ===
+ddim_ts: 100
+
+

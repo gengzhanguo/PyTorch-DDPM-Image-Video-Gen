@@ -1,0 +1,57 @@
+dataset: MNIST
+
+# === General parameters ===
+save_dir: "C:/Users/Admin/Desktop/Research/DDPM/MNIST_Results"
+seed: 42
+device: cuda
+
+# === Dataset parameters ===
+dataset_path: "C:/Users/Admin/Desktop/Research/dataset/MNIST"
+digits: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+RGB_channel: 1
+depth_channel: 5
+depth_loc: [0, 1]
+pt_per_digit: 1000
+img_dim: 32
+RGB_range: [-1.0, 1.0]
+# dataset_shape: 
+latent_dim: 1
+split_ratio: 0.8
+batch_size: 64
+
+# === Model parameters ===
+dim_conv: 3
+# --- Embedding parameters ---
+Embedding_method: Sinusoidal
+# --- Attention parameters ---
+num_head: 4
+dim_head: 32
+# num_mem_kv: 4
+# # --- Transformer parameters ---
+# patch_size: 4
+# embed_dim: 128
+# num_att: 6
+# # --- DDPM parameters---
+unet_choice: bottleneck
+self_cond: false
+immiscible: false
+min_SNR_lossweight: false
+offset_noise_strength: 0.0
+learn_var: false
+image_channel: 1
+base_channel: 32
+base_mults: [1, 2, 4, 8]
+c_emb_dim: 64
+t_emb_dim: 64
+
+num_ts: 500
+target_mode: noise
+
+# === Training parameters ===
+lr: 0.0001
+val_num: 25
+num_epochs: 10000
+max_patience: 20
+
+# === Postprocess parameters ===
+ddim_ts: 100
