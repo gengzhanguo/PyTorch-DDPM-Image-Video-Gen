@@ -1,0 +1,9 @@
+torch>=1.12.0
+torchvision
+numpy
+matplotlib
+tqdm
+einops
+pyyaml # For yaml parsing
+wandb
+scipy # For linear_sum_assignment (even if commented out, good to have if user enables it)
